@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+</head>
+<body>
+  <h1>Welcome!!</h1>
+
+  <p>
+    ID: <span sec:authentication="principal.id"></span>
+    <!--/* <span th:text="${#authentication.Principal.id}"></span> */-->
+  </p>
+  <p>
+    名前: <span sec:authentication="name"></span>
+  </p>
+  <p>
+    ロール: <span sec:authentication="principal.authorities"></span>
+  </p>
+
+  <a th:href="@{/logout}">ログアウト</a>
+</body>
+</html>
