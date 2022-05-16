@@ -7,6 +7,20 @@
 <body>
   <h1>管理者用</h1>
   <p>このページは、管理者ロールが付与されたユーザのみ表示できるページです。</p>
-  <a th:href="@{/logout}">ログアウト</a>
+
+  <p th:text="${resultMessage}"></p>
+
+  <form method="post" th:action="@{/admin/user-add}"
+    th:object="${customer}">
+    <input type="text" th:field="*{id}"> <input type="text"
+      th:field="*{name}"> <input type="password"
+      th:field="*{password}">
+    <button type="submit">登録</button>
+  </form>
+
+  <p>
+    <a th:href="@{/logout}">ログアウト</a>
+  </p>
+
 </body>
 </html>
