@@ -9,7 +9,7 @@ VALUES
 (
    'admin',
    'Administrator',
-   '$2a$10$0NiruiEbcF14TCxPMINe9O3P5lqH4.RvFPDie3OtuELoROQVZbjSK',
+   '{bcrypt}$2a$10$0NiruiEbcF14TCxPMINe9O3P5lqH4.RvFPDie3OtuELoROQVZbjSK',
    'ROLE_ADMIN'
 );
 INSERT INTO customer
@@ -23,6 +23,6 @@ VALUES
 (
    'user',
    'User Name',
-   '$2a$10$0NiruiEbcF14TCxPMINe9O3P5lqH4.RvFPDie3OtuELoROQVZbjSK',
+   '{bcrypt}$2a$10$0NiruiEbcF14TCxPMINe9O3P5lqH4.RvFPDie3OtuELoROQVZbjSK',
    'ROLE_USER'
 );
